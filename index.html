@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- Lightweight reference copy: embedded photos removed to save project space. Full version with photos is kept outside the project. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toast to Life Display Campaign — Allyn Insights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #CE202E;
+  --red-light: #fdeaea;
+  --dark: #111111;
+  --gray: #888A8D;
+  --gray-light: #f7f7f6;
+  --border: #e2e2e2;
+  --white: #ffffff;
+  --green: #2a7a4b;
+  --amber: #b6790f;
+  --condensed: 'Barlow Condensed', sans-serif;
+  --body: 'Barlow', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--white);color:var(--dark);font-size:15px;line-height:1.6;}
+.site-header{background:var(--dark);padding:0 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;height:60px;box-shadow:0 2px 16px rgba(0,0,0,.5);}
+@media(max-width:640px){.site-header{padding:0 16px;flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:10px;gap:8px;position:static;box-shadow:none;}}
+.logo-row{display:flex;align-items:center;gap:13px;}
+.allyn-bug{width:36px;height:36px;flex-shrink:0;display:block;}
+.logo-text{font-family:var(--condensed);font-weight:500;font-size:15px;color:#fff;text-transform:uppercase;letter-spacing:.08em;}
+.hc-name{font-family:var(--condensed);font-weight:500;font-size:16px;color:#fff;text-align:right;}
+.hc-period{font-size:12px;color:var(--gray);text-align:right;}
+.red-bar{height:3px;background:var(--red);}
+.print-btn {
+  display: inline-flex; align-items: center; gap: 7px; background: var(--red); color: #fff;
+  border: none; border-radius: 5px; padding: 8px 16px; font-family: var(--body);
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em;
+  cursor: pointer; transition: background .15s, transform .1s; flex-shrink: 0;
+}
+.print-btn:hover { background: #a8181f; }
+.print-btn:active { transform: scale(.97); }
+.report-cover{background:var(--white);padding:40px 40px 8px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+@media(max-width:600px){.report-cover{padding:28px 16px 8px;}}
+.cover-eyebrow{font-family:var(--condensed);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--red);margin-bottom:12px;}
+.cover-headline{font-family:var(--condensed);font-weight:500;font-size:40px;color:var(--dark);line-height:1.08;letter-spacing:.01em;margin-bottom:10px;max-width:900px;}
+.cover-sub{font-size:15px;color:var(--gray);margin-bottom:0;}
+.cover-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+@media(max-width:800px){.cover-metrics{grid-template-columns:1fr 1fr;}}
+.cm{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 16px;position:relative;overflow:hidden;}
+.cm::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);}
+.cm-val{font-family:var(--condensed);font-weight:500;font-size:28px;color:var(--dark);line-height:1;}
+.cm-label{font-size:10.5px;color:var(--gray);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;}
+.cm-delta{font-size:12px;margin-top:4px;color:var(--gray);}
+.hero-wrap{margin-top:28px;border-radius:8px;overflow:hidden;border:1px solid var(--border);}
+.hero-wrap img{width:100%;display:block;}
+.hero-cap{background:var(--gray-light);padding:10px 16px;font-size:12px;color:var(--gray);border-top:1px solid var(--border);}
+.report-body{max-width:1120px;margin:0 auto;padding:0 32px 48px;}
+@media(max-width:600px){.report-body{padding:0 16px 40px;}}
+.report-section{padding:40px 0 0;border-top:1px solid var(--border);margin-top:40px;}
+.report-section:first-child{border-top:none;margin-top:0;padding-top:40px;}
+.section-number{font-family:var(--condensed);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--red);margin-bottom:6px;}
+.section-title{font-family:var(--condensed);font-weight:500;font-size:28px;color:var(--dark);letter-spacing:.01em;margin-bottom:20px;line-height:1.15;}
+.prose{font-size:15px;line-height:1.75;color:#333;max-width:760px;}
+.prose p{margin-bottom:16px;}
+.prose p:last-child{margin-bottom:0;}
+.prose strong{color:var(--dark);font-weight:700;}
+.prose-wide{font-size:15px;line-height:1.75;color:#333;}
+.prose-wide p{margin-bottom:16px;}
+.prose-wide strong{color:var(--dark);font-weight:700;}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px;align-items:start;}
+.split-3-2{display:grid;grid-template-columns:3fr 2fr;gap:32px;margin-top:24px;align-items:start;}
+@media(max-width:800px){.split,.split-3-2{grid-template-columns:1fr;}}
+.data-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 20px;}
+.dc-title{font-family:var(--condensed);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;gap:7px;}
+.dc-title::before{content:'';display:inline-block;width:7px;height:7px;background:var(--red);flex-shrink:0;}
+.kpi-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px;margin-bottom:20px;}
+@media(max-width:800px){.kpi-strip{grid-template-columns:repeat(2,1fr);}}
+.kpi{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 16px;position:relative;overflow:hidden;}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);}
+.kpi-label{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px;}
+.kpi-value{font-family:var(--condensed);font-weight:500;font-size:26px;line-height:1;color:var(--dark);}
+.kpi-sub{font-size:12px;margin-top:4px;color:var(--gray);}
+.tbl-wrap{overflow-x:auto;margin-top:2px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{text-align:left;padding:7px 10px;color:var(--gray);font-weight:700;text-transform:uppercase;letter-spacing:.06em;border-bottom:1.5px solid var(--border);white-space:nowrap;}
+td{padding:8px 10px;border-bottom:.5px solid #f2f2f0;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:#fafafa;}
+a.src-link{color:var(--red);text-decoration:none;}
+a.src-link:hover{text-decoration:underline;}
+.badge{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;white-space:nowrap;}
+.b-green{background:#e6f4ec;color:var(--green);}
+.b-red{background:var(--red-light);color:var(--red);}
+.b-amber{background:#fbf1e2;color:var(--amber);}
+.b-gray{background:#f0f0f0;color:var(--gray);}
+.pull-quote{border-left:4px solid var(--red);padding:14px 20px;margin:24px 0;background:var(--red-light);border-radius:0 6px 6px 0;max-width:760px;}
+.pq-text{font-size:16px;font-weight:700;color:var(--dark);line-height:1.5;}
+.pq-attr{font-size:12px;color:var(--gray);margin-top:8px;font-weight:600;}
+.note{font-size:13px;color:var(--gray);line-height:1.6;margin-top:14px;padding:10px 14px;background:var(--gray-light);border-radius:5px;border-left:3px solid var(--red);}
+.tbl-cap{font-size:12.5px;color:var(--gray);line-height:1.6;margin-top:10px;}
+.rec-list{display:flex;flex-direction:column;gap:16px;margin-top:8px;}
+.rec-item{display:flex;gap:16px;padding:18px 20px;background:var(--white);border:1px solid var(--border);border-radius:8px;border-left:4px solid var(--red);}
+@media(max-width:500px){.rec-item{padding:14px 16px;flex-direction:column;gap:6px;}}
+.rec-num{font-family:var(--condensed);font-weight:500;font-size:22px;color:var(--red);flex-shrink:0;width:28px;padding-top:1px;}
+.rec-title{font-family:var(--condensed);font-weight:500;font-size:16px;text-transform:uppercase;letter-spacing:.04em;color:var(--dark);margin-bottom:6px;}
+.rec-text{font-size:14px;color:#444;line-height:1.7;}
+.rec-text strong{color:var(--dark);font-weight:700;}
+.photo-inline{margin:20px 0;border-radius:8px;overflow:hidden;border:1px solid var(--border);}
+.photo-inline img{width:100%;display:block;}
+.photo-cap{background:var(--gray-light);padding:9px 14px;font-size:12px;color:var(--gray);border-top:1px solid var(--border);}
+.site-footer{background:var(--dark);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;margin-top:48px;flex-wrap:wrap;gap:6px;}
+.sf-left{font-size:12px;color:var(--gray);}
+.sf-left span{color:var(--red);}
+.sf-right{font-family:var(--condensed);font-weight:500;font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;}
+@media print {
+  .site-header, .site-footer { display:none !important; }
+  @page { margin: 12mm; size: letter; }
+  body{background:#fff !important;}
+  /* Keep headings attached to the content that follows them */
+  .section-number,.section-title,.dc-title{break-after:avoid;page-break-after:avoid;}
+  /* Keep small, self-contained elements from splitting across a page break */
+  .cm,.kpi,.rec-item,.pull-quote,.photo-inline,.hero-wrap{break-inside:avoid;page-break-inside:avoid;}
+  tr{break-inside:avoid;page-break-inside:avoid;}
+  thead{display:table-header-group;}
+  /* Reclaim horizontal room and tighten tables so wide rows fit the printable width */
+  .report-body{padding:0 10px 24px;}
+  .data-card{padding:12px 12px;}
+  table{font-size:10px;}
+  th,td{padding:5px 6px;}
+  th{white-space:normal;}
+  /* Keep hero and inline photos from eating a disproportionate share of a printed page */
+  .hero-wrap img{max-height:260px;object-fit:cover;width:100%;}
+  .photo-inline img{max-height:230px;object-fit:cover;width:100%;}
+}
+/* Body text at 11pt minimum (brand guide): prose is already 15px = 11.25pt; raise table text to 11pt */
+td{font-size:11pt;}
+@media print { td{font-size:11pt;} }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="logo-row">
+    <img class="allyn-bug" src="data:image/png;base64,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" alt="Allyn logo">
+    <div class="logo-text">Insights</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:20px;">
+    <div style="text-align:right;">
+      <div class="hc-name">Resource Center &mdash; Toast to Life</div>
+      <div class="hc-period">Programmatic Display Results &mdash; October 2026</div>
+    </div>
+    <button class="print-btn" onclick="window.print()" title="Download as PDF">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      PDF
+    </button>
+  </div>
+</header>
+<div class="red-bar"></div>
+<div class="report-cover">
+  <div class="cover-eyebrow">Allyn Insights &mdash; Paid Media Results</div>
+  <div class="cover-headline">Toast to Life 2027<br>Programmatic Display Campaign</div>
+  <div class="cover-sub">Saturday, October 24 &ndash; Saturday, October 31, 2026 &middot; 48 Dallas-Fort Worth cities &middot; Prepared by Allyn &middot; Confidential</div>
+  <div class="cover-metrics">
+    <div class="cm"><div class="cm-label">Impressions</div><div class="cm-val">547,140</div><div class="cm-delta">Geo-optimized + event targeting, 8 days</div></div>
+    <div class="cm"><div class="cm-label">Clicks</div><div class="cm-val">1,019</div><div class="cm-delta">$2.94 average cost per click</div></div>
+    <div class="cm"><div class="cm-label">Click-Through Rate</div><div class="cm-val">0.186%</div><div class="cm-delta">1.86x the 0.10% campaign goal</div></div>
+    <div class="cm"><div class="cm-label">Budget Delivered</div><div class="cm-val">$3,000.03</div><div class="cm-delta">100% of the $3,000 plan &middot; $5.48 average CPM</div></div>
+  </div>
+</div>
+<div class="report-body">
+  <!-- SECTION 1 -->
+  <div class="report-section">
+    <div class="section-number">Section 1</div>
+    <div class="section-title">The Campaign</div>
+    <div class="prose-wide">
+      <p>From Saturday, October 24 through Saturday, October 31, 2026, a programmatic display campaign ran to promote ticket sales for Resource Center's <strong>Toast to Life</strong> event.</p>
+      <p>The flight ran through Simpli.fi as two campaigns using the same creative and the same 48 markets. The first was <strong>geo-optimized</strong>: it reached people across the target areas. The second used <strong>event targeting</strong>: it reached users from the Dallas Halloween Block Party on October 24. Together they served <strong>547,140 impressions</strong> and drew <strong>1,019 clicks</strong> on a $3,000 budget, which was delivered in full.</p>
+    </div>
+  </div>
+  <!-- SECTION 2 -->
+  <div class="report-section">
+    <div class="section-number">Section 2</div>
+    <div class="section-title">What It Means</div>
+    <div class="prose-wide">
+      <p><strong>The creative drew clicks at well above the target rate.</strong> Both campaigns had a 0.10% click-through goal. The flight finished at 0.186% overall. In the geo-optimized campaign, seven of the eight live ad sizes cleared the goal; the only one that fell short was the 160x600 skyscraper (0.052%).</p>
+      <p><strong>Mobile carried the campaign.</strong> In the geo-optimized campaign, the 320x50 mobile banner alone delivered 53% of impressions and 55% of clicks. Its click-through rate of 0.19% was in line with the campaign as a whole, so the reach came without a drop in engagement.</p>
+      <p><strong>The event audience engaged at twice the rate.</strong> The event-targeted campaign ran at a 0.362% click-through rate, roughly double the geo-optimized campaign.</p>
+    </div>
+  </div>
+  <!-- SECTION 3 -->
+  <div class="report-section">
+    <div class="section-number">Section 3</div>
+    <div class="section-title">Campaign Setup</div>
+    <div class="data-card" style="max-width:760px;">
+      <div class="dc-title">Targeting &amp; Delivery Settings</div>
+      <div class="tbl-wrap">
+        <table>
+          <tbody>
+            <tr><td><strong>Campaign type</strong></td><td>Geo-optimized display; event targeting (listed in Simpli.fi as Site Retargeting with an event audience)</td></tr>
+            <tr><td><strong>Bid / goal</strong></td><td>$6.00 max CPM and 0.10% CTR goal on both</td></tr>
+            <tr><td><strong>Devices</strong></td><td>Desktops and laptops, mobile, tablets on both</td></tr>
+            <tr><td><strong>Frequency cap</strong></td><td>Geo-optimized: 4 impressions per person per 20 hours. Event targeting: none</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="sf-left">Confidential &mdash; prepared by <span>Allyn</span> &middot; November 2026 &middot; allynmedia.com</div>
+  <div class="sf-right">Allyn Insights &middot; Paid Media Results</div>
+</footer>
+</body>
+</html>
